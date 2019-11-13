@@ -4,13 +4,15 @@ const DEFAULT_ATK = 5;
 const DEFAULT_DEF = 5;
 const DEFAULT_TEK = 5;
 
-const P0NAME = "Crash"
-const P0CHARA = "crashr"
-const P1NAME = "Sam"
-const P1CHARA = "saml"
+
+const P0NAME = 'Crash'
+const P0CHARA = 'crashr'
+const P1NAME = 'Sam'
+const P1CHARA = 'saml'
 
 let playerTurn = false;
 let logging = true;
+
 
 class Fighter {
   constructor(name, charaName) {
@@ -27,7 +29,7 @@ class Fighter {
     this.charaName = charaName;
   }
   attack(target) {
-    console.log(this.name + " attacked " + target.name)
+    console.log(this.name + ' attacked ' + target.name)
   }
   single(target) {
     this.attack(target);
@@ -37,7 +39,7 @@ class Fighter {
     this.attack(target);
   }
   recover() {
-    console.log("Recovered!")
+    console.log('Recovered!')
   }
 }
 
@@ -45,17 +47,31 @@ class Fighter {
 let Player0;
 let Player1;
 
+let gameBox;
+let headerBox;
+let graphicsBox;
+let barsBox;
+let controlsBox;
+let outputBox;
+
 function startup() {
   Player0 = new Fighter(P0NAME, P0CHARA);
   Player1 = new Fighter(P1NAME, P1CHARA);
 
-document.getElementById("graphicsBox").innerHTML = " <img class='fighterIMG' alt='Crash' id='crashr' src='img/crashr_idle.png'>"
-document.getElementById("graphicsBox").innerHTML += " <img class='fighterIMG' alt='Sam' id='saml' src='img/saml_idle.png'>"
+  gameBox = document.getElementById("gameBox")
+  headerBox = document.getElementById("headerBox")
+  graphicsBox = document.getElementById("graphicsBox")
+  barsBox = document.getElementById("barsBox")
+  controlsBox = document.getElementById("controlsBox")
+  outputBox = document.getElementById("outputBox")
+
+graphicsBox.innerHTML = ' <img src="img/'+ P0CHARA +'_idle.png" id="'+ Player0.charaName +'"class="fighterIMG" alt="' +Player0.name +'">'
+graphicsBox.innerHTML += ' <img src="img/'+ P1CHARA + '_idle.png" id="'+ Player1.charaName +'" class="fighterIMG" alt="' +Player1.name +'">'
 
 
 
-  console.log("My name is " + Player0.name + " and my ATK is " + Player0.atk)
-  console.log("My name is " + Player1.name + " and my ATK is " + Player1.atk)
+  console.log('My name is ' + Player0.name + ' and my ATK is ' + Player0.atk)
+  console.log('My name is ' + Player1.name + ' and my ATK is ' + Player1.atk)
 }
 
 
