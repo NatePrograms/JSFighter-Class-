@@ -4,10 +4,10 @@ const DEFAULT_ATK = 5;
 const DEFAULT_DEF = 5;
 const DEFAULT_TEK = 5;
 
-const P0NAME = "Crash"
-const P0CHARA = "crashr"
-const P1NAME = "Sam"
-const P1CHARA = "saml"
+const P0NAME = 'Crash'
+const P0CHARA = 'crashr'
+const P1NAME = 'Sam'
+const P1CHARA = 'saml'
 
 let playerTurn = false;
 let logging = true;
@@ -27,7 +27,7 @@ class Fighter {
     this.charaName = charaName;
   }
   attack(target) {
-    console.log(this.name + " attacked " + target.name)
+    console.log(this.name + ' attacked ' + target.name)
   }
   single(target) {
     this.attack(target);
@@ -37,7 +37,7 @@ class Fighter {
     this.attack(target);
   }
   recover() {
-    console.log("Recovered!")
+    console.log('Recovered!')
   }
 }
 
@@ -49,8 +49,8 @@ function startup() {
   Player0 = new Fighter(P0NAME, P0CHARA);
   Player1 = new Fighter(P1NAME, P1CHARA);
 
-  document.getElementById('graphicsBox').innerHTML = "<img src ='img/crashr_idle.png' class ='fighterIMG' alt ='Crash' id ='crashr'></img>"
-  document.getElementById('graphicsBox').innerHTML += "<img src ='img/saml_idle.png' class ='fighterIMG' alt ='Sam' id ='saml' align ='left'></img>"
+  document.getElementById('graphicsBox').innerHTML = '<img src ="img/crashr_idle.png" class ="fighterIMG" alt ="Crash" id ="crashr"></img>'
+  document.getElementById('graphicsBox').innerHTML += '<img src ="img/saml_idle.png" class ="fighterIMG" alt ="Sam" id ="saml"></img>'  
 
   console.log("My name is " + Player0.name + " and my ATK is " + Player0.atk)
   console.log("My name is " + Player1.name + " and my ATK is " + Player1.atk)
