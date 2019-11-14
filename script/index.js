@@ -1,9 +1,9 @@
+
 const START_HP = 20;
 const START_SP = 10;
 const DEFAULT_ATK = 5;
 const DEFAULT_DEF = 5;
 const DEFAULT_TEK = 5;
-
 
 const P0NAME = 'Crash'
 const P0CHARA = 'crashr'
