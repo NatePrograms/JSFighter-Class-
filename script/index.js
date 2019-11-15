@@ -1,4 +1,3 @@
-
 const START_HP = 20;
 const START_SP = 10;
 const DEFAULT_ATK = 5;
@@ -10,7 +9,7 @@ const P0CHARA = 'crashr'
 const P1NAME = 'Sam'
 const P1CHARA = 'saml'
 
-let playerTurn = false;
+let playerTurn = true;
 let logging = true;
 
 let Player0;
@@ -32,7 +31,7 @@ class Fighter {
     this.name = name;
     this.hp = START_HP;
     this.sp = START_SP;
-    this.atk = DEFAULT_ATK;
+    this.atk = DEFAULT_ATK
     this.def = DEFAULT_DEF;
     this.tek = DEFAULT_TEK;
     this.charaName = charaName;
@@ -52,6 +51,7 @@ class Fighter {
   }
 }
 
+
 function startup() {
   Player0 = new Fighter(P0NAME, P0CHARA);
   Player1 = new Fighter(P1NAME, P1CHARA);
@@ -68,10 +68,20 @@ function startup() {
 
   console.log('My name is ' + Player0.name + ' and my ATK is ' + Player0.atk)
   console.log('My name is ' + Player1.name + ' and my ATK is ' + Player1.atk)
+
+showControls()
+
 }
 
+function showControls() {
 
+  if (playerTurn) {
+    controlsBox.innerHTML = '<button onclick="Player1.single(Player0)">Single Attack! </button>'
 
+  } else {
+    controlsBox.innerHTML = '<button onclick="Player0.single(Player1)">Single Attack! </button>'
+  }
+}
 
 
 
