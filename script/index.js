@@ -82,7 +82,7 @@ function startup() {
 
   showControls() //runs the showControls() function
 
-  attack() //runs the attack() function
+  attackP1() //runs the attack() function
 }
 
 function showControls() {
@@ -97,7 +97,7 @@ function showControls() {
 }
 
 
-function attack() {
+function attackP1() {
 
   // graphicsBox.innerHTML = '<img id ="' + Player0.charaName + '" src="img/' + Player0.charaName + '_hit.png" alt="' + Player0.name + '" class="fighterIMG">'
   // graphicsBox.innerHTML += '<img id ="' + Player1.charaName + '" src="img/' + Player1.charaName + '_hit.png" alt="' + Player1.name + '" class="fighterIMG">'
