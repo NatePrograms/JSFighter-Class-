@@ -81,6 +81,8 @@ function startup() {
   console.log("My name is " + Player1.name + " and my ATK is " + Player1.atk)
 
   showControls() //runs the showControls() function
+
+  attack() //runs the attack() function
 }
 
 function showControls() {
@@ -93,6 +95,19 @@ function showControls() {
     controlsBox.innerHTML = '<button type="button" name="attack" onclick="Player0.single(Player1)">Single Attack!</button>'
   }
 }
+
+
+function attack() {
+
+  // graphicsBox.innerHTML = '<img id ="' + Player0.charaName + '" src="img/' + Player0.charaName + '_hit.png" alt="' + Player0.name + '" class="fighterIMG">'
+  // graphicsBox.innerHTML += '<img id ="' + Player1.charaName + '" src="img/' + Player1.charaName + '_hit.png" alt="' + Player1.name + '" class="fighterIMG">'
+  function koCheck() {
+    if (Player0.hp <= 0)
+      console.log('' + Player0.name + ' has been KO\'d');
+  }
+
+}
+
 
 /*
 
