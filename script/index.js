@@ -81,7 +81,6 @@ function startup() {
   console.log("My name is " + Player1.name + " and my ATK is " + Player1.atk)
 
   showControls() //runs the showControls() function
-  hideControls()
 }
 
 function showControls() {
@@ -96,7 +95,6 @@ function showControls() {
 }
 
 function hideControls() {
-  if (Player1.hp <= 0) {
     controlsBox.innerHTML = ''
   }
 }
