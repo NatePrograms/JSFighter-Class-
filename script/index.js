@@ -97,7 +97,7 @@ function showControls() {
 function hideControls() {
     controlsBox.innerHTML = ''
   }
-}
+
 
 
 /*
