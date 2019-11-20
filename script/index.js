@@ -113,6 +113,7 @@ function koCheck(target, amount) {
 }
 
 
+
 function updateBars() {
   //calculates the percent of HP
   player0PercentHP = (Player0.hp / START_HP) * 100
