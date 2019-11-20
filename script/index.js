@@ -50,7 +50,6 @@ class Fighter {
     let amount = Math.floor((Math.random() * this.atk) + 1);
     koCheck(target, amount)
     outputBox.innerHTML = (this.name + ' attacked ' + target.name + ' for ' + amount + ' damage. ' + target.name + ' now has ' + target.hp + ' health remaining.');
-    hideContols(target)
   }
 
   single(target) {
