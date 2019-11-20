@@ -163,11 +163,8 @@ function updateBars() {
   barsBox.innerHTML += '<div class="spBar"><div style="height:' + player1PercentSP + '%; width: 100%;" id="p1SPfill" class="SPfill"></div></div>'
 }
 
-function hideContols(target) {
-  if (target.hp <= 0) {
-    controlsBox.innerHTML = '';
-    outputBox.innerHTML = target.name + ' has been Knocked Out!'
-  }
+function hideContols() {
+  controlsBox.innerHTML = "";
 }
 
 
