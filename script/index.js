@@ -112,7 +112,12 @@ function koCheck(target, amount) {
   }
 }
 
-
+// EndTurn code
+function endTurn() {
+  playerTurn = !playerTurn
+  if (kocheck(Player0, 0) || kocheck(Player1, 0)){
+    hideControls();
+  }
 
 function updateBars() {
   //calculates the percent of HP
