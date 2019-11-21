@@ -47,11 +47,14 @@ class Fighter {
 
   //this logs who attacked who
   attack(target) {
-    outputBox.innerHTML = (this.name + ' attacked ' + target.name);
+    let amount = Math.floor((Math.random() * this.atk) + 1);
+    koCheck(target, amount)
+    outputBox.innerHTML = (this.name + ' attacked ' + target.name + ' for ' + amount + ' damage. ' + target.name + ' now has ' + target.hp + ' health remaining.');
   }
 
   single(target) {
-    this.attack(target);
+    attack();
+    endTurn();
   }
 
   double(target) {
@@ -86,7 +89,7 @@ function startup() {
   console.log("My name is " + Player0.name + " and my ATK is " + Player0.atk)
   console.log("My name is " + Player1.name + " and my ATK is " + Player1.atk)
 
-  showControls() //runs the showControls() function
+  showControls()
   updateBars() //runs the updateBars() function
 }
 
@@ -110,6 +113,16 @@ function koCheck(target, amount) {
   }
 }
 
+// EndTurn code
+function endTurn() {
+  playerTurn = !playerTurn
+  if (koCheck(Player0, 0) || koCheck(Player1, 0)){
+    hideControls();
+  }
+  else {
+    showControls();
+  }
+}
 
 function updateBars() {
   //calculates the percent of HP
@@ -160,19 +173,8 @@ function updateBars() {
   barsBox.innerHTML += '<div class="spBar"><div style="height:' + player1PercentSP + '%; width: 100%;" id="p1SPfill" class="SPfill"></div></div>'
 }
 
-// EndTurn code
-function endTurn() {
-  playerTurn = !playerTurn
-  if (kocheck(Player0, 0) || kocheck(Player1, 0)){
-    hideControls();
-  }
-  else {
-    showControls();
-  }
-}
-
 function hideContols() {
-  controlsBox.innerHTML = "";
+  controlsBox.innerHTML = '';
 }
 
 
