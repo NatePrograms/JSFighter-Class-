@@ -169,7 +169,7 @@ function updateBars() {
 }
 
 function hideContols() {
-  controlsBox.innerHTML = "";
+  controlsBox.innerHTML = '';
 }
 
 
